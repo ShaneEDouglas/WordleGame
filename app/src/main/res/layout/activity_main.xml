@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/themebackground"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gameCardView"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/wordleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Wordle"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/guessOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Guess #1"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/wordleTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/guessOneCorrectness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Correctness"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/guessOne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp" />
+
+
+            <TextView
+                android:id="@+id/guessTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Guess #2"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/guessOneCorrectness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/guessTwoCorrectness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Correctness"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/guessTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/guessThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Guess #3"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/guessTwoCorrectness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/guessThreeCorrectness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Correctness"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/guessThree"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/guessFour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Guess #4"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/guessThreeCorrectness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/guessFourCorrectness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Correctness"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/guessFour"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Submit Button -->
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/guessEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/mainbtnbackground"
+        android:ems="10"
+        android:hint="Enter 4 letter guess here"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameCardView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitGuessButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mainbtnbackground"
+        android:fontFamily="@font/latoregular"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textFontWeight="120"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guessEditText"
+        app:layout_constraintVertical_bias="0.245" />
+
+
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/endGameCardView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#1e8743"
+        app:cardElevation="200dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/endGameMessageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Game Over!"
+                android:textSize="30sp"
+                android:textColor="#FFFAFA"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resetGameButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Reset Game"
+                android:background="@drawable/mainbtnbackground"
+                app:layout_constraintTop_toBottomOf="@id/endGameMessageTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/targetWordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Target Word: "
+                android:textSize="30sp"
+                android:textColor="#FFFAFA"
+                app:layout_constraintTop_toBottomOf="@id/resetGameButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/realTargetworldtextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="30sp"
+                android:textColor="#FFFAFA"
+                app:layout_constraintTop_toBottomOf="@id/targetWordTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

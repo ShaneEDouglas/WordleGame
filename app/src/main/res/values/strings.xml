@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WordleGame</string>
+    <string name="Enter_word">Enter your 4 letter word</string>
+</resources>
