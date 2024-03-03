@@ -204,7 +204,7 @@ class MainActivity : AppCompatActivity() {
                 damping = 0.9f,
                 spread = 360,
                 colors = listOf(0xfce18a, 0xff726d, 0xf4306d, 0xb48def),
-                emitter = Emitter(duration = 100, TimeUnit.SECONDS).max(100),
+                emitter = Emitter(duration = 100, TimeUnit.MILLISECONDS).max(100),
                 position = Position.Relative(0.5, 0.3)
             )
 
